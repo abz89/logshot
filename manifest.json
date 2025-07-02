@@ -3,7 +3,12 @@
   "name": "Screenshot with Popup",
   "version": "1.0",
   "description": "Take a screenshot of the current tab with a popup interface.",
-  "permissions": ["tabs", "activeTab", "downloads", "notifications"],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "downloads",
+    "notifications"
+  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -11,11 +16,22 @@
     "default_popup": "popup.html",
     "default_title": "Take Screenshot"
   },
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "icons": {
     "16": "icon.png",
     "32": "icon.png",
     "48": "icon.png",
     "128": "icon.png"
+  },
+  "commands": {
+    "capture-screenshot": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+R",
+        "mac": "Ctrl+Shift+R"
+      },
+      "description": "Take a screenshot of the current tab"
+    }
   }
 }
