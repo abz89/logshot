@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Screenshot with Popup",
+  "version": "1.0",
+  "description": "Ambil screenshot dari tab aktif menggunakan tombol popup.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "downloads",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Ambil Screenshot"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
