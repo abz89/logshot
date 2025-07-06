@@ -1,16 +1,17 @@
-# 📸 Screenshot Popup Extension
+# 📸 LogShot
 
-**Screenshot Popup Extension** is a lightweight and minimal Chrome extension that lets you take a screenshot of your current browser tab using a keyboard shortcut. The screenshot is automatically saved as a `.png` file with the format: MM-DD - Tab Title.png
+**LogShot** is a lightweight and minimal Chrome extension that lets you take a screenshot of your current browser tab using a keyboard shortcut. The screenshot is automatically saved as a `.png` file with the format: MM-DD - Tab Title.png
 
 ---
 
 ## ✨ Features
 
 - ✅ One-click (or one-key) screenshot of the active tab
-- ✅ Automatically saves to your **Downloads** folder
+- ✅ Automatically saves to your **Downloads** folder (toggle is configurable)
 - ✅ Clean filename: date + current tab title
-- ✅ Native notification upon successful save
-- ✅ Works on both **Chrome** and **Arc Browser**
+- ✅ Native notification upon successful save (toggle is configurable)
+- ✅ Post an image to Slack channel (Bot Token & Channel is configurable)
+- ✅ Works on both **Chrome** and **Arc Browser** (with workaround, toggle is configurable)
 
 ---
 
@@ -35,6 +36,7 @@
   - Capture the visible area of the current tab
   - Save the screenshot to the **Downloads** folder
   - Show a notification with the file name
+  - Post an image to Slack channel
 
 ### 🔹 Option B — Click the extension icon
 
@@ -58,7 +60,7 @@ After the screenshot is captured and saved, a notification will appear showing:
   You must manually assign a shortcut via `chrome://extensions/shortcuts`.
 
 - In **Arc Browser**, keyboard shortcuts can only be used to activate the extension (i.e., open popup).  
-  This extension uses a workaround to support that behavior via popup auto-close.
+  This extension has a workaround to support that behavior via auto-close pop-up.
 
 ---
 
@@ -66,6 +68,7 @@ After the screenshot is captured and saved, a notification will appear showing:
 
 - [ ] Full-page screenshot support
 - [ ] Option to choose image format (PNG/JPEG)
+- [ ] Option to custom tab title - filename mapping
 - [ ] Auto-upload to cloud services (Drive, Dropbox, etc.)
 - [ ] History panel for saved screenshots
 

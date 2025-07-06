@@ -1,21 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "Screenshot with Popup",
+  "name": "LogShot",
   "version": "1.0",
-  "description": "Take a screenshot of the current tab with a popup interface.",
+  "description": "Take screenshots and optionally post to Slack with configurable options.",
   "permissions": [
     "tabs",
     "activeTab",
     "downloads",
-    "notifications"
+    "notifications",
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html",
-    "default_title": "Take Screenshot"
+    "default_title": "Take Screenshot",
+    "default_popup": "popup.html"
   },
+  "options_page": "options.html",
   "host_permissions": [
     "<all_urls>"
   ],
