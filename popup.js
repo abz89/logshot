@@ -1,13 +1,19 @@
-document.getElementById("screenshot").addEventListener("click", async () => {
-  chrome.runtime.sendMessage({ action: "capture" });
-});
+document.addEventListener("DOMContentLoaded", () => {
+  chrome.storage.sync.get(["fixForArc"], (config) => {
+    console.log("fixForArc:", config.fixForArc);
 
-chrome.storage.sync.get(["fixForArc"], (config) => {
-  if (config.fixForArc) {
-    document.addEventListener("DOMContentLoaded", () => {
+    if (config.fixForArc) {
+      // Auto-capture mode (Arc fix)
       chrome.runtime.sendMessage({ action: "capture" }, () => {
         window.close();
       });
-    });
-  }
+    } else {
+      // Manual mode (button click)
+      document.getElementById("screenshot").addEventListener("click", () => {
+        chrome.runtime.sendMessage({ action: "capture" }, () => {
+          window.close();
+        });
+      });
+    }
+  });
 });
